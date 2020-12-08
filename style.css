@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap");
+
+:root {
+  --light-pink: #f3dad8;
+  --dark-pink: #f8263be5;
+  --green: #14591d;
+  --navy: #022b3a;
+  --light-blue: #c3ece5;
+  --dark-blue: #036656;
+  --gold: rgba(233, 196, 30, 0.856);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gamja Flower", cursive;
+  background-color: var(--light-blue);
+}
+
+.section-center {
+  position: relative;
+  margin: 0 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* header */
+.header h1 {
+  display: flex;
+  text-align: center;
+  padding: 0;
+  text-transform: capitalize;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-holly-berry:before {
+  font-size: 4rem;
+  color: var(--gold);
+}
+
+.header span.red {
+  color: var(--dark-pink);
+  font-size: 4rem;
+  margin-left: 2rem;
+}
+
+.header span.green {
+  color: var(--green);
+  font-size: 6rem;
+  margin-left: 2rem;
+}
+
+.title {
+  border-radius: 0.8rem;
+}
+
+/* image */
+.img-container {
+  position: relative;
+  height: 70vh;
+  width: 60vw;
+}
+
+.images {
+  height: 100%;
+  width: 100%;
+  background-color: #022b3a;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+  grid-template-areas:
+    "one two three"
+    "four five three"
+    "four six seven";
+}
+
+.images .one {
+  grid-area: one;
+}
+
+.images .two {
+  grid-area: two;
+}
+
+.images .three {
+  grid-area: three;
+}
+
+.images .four {
+  grid-area: four;
+}
+
+.images .five {
+  grid-area: five;
+}
+
+.images .six {
+  grid-area: six;
+}
+
+.images .seven {
+  grid-area: seven;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+/* countdown */
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.countdown-container h1 {
+  font-size: 3.5rem;
+  color: var(--dark-pink);
+  text-transform: capitalize;
+}
+
+.countdown-wrap {
+  display: flex;
+  justify-content: space space-between;
+  margin-left: 3rem;
+}
+
+.countdown {
+  width: 8rem;
+  display: inline;
+  padding: 0.5rem 1.5rem;
+  margin: 1rem 1rem;
+  background-color: var(--dark-blue);
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.countdown h4 {
+  font-size: 3rem;
+  color: var(--light-pink);
+}
+
+.countdown span {
+  font-size: 2rem;
+  color: var(--light-pink);
+  text-transform: capitalize;
+}
+
+@media only screen and (max-width: 786px) {
+  .fa-holly-berry:before {
+    font-size: 3rem;
+  }
+
+  .header span.red {
+    font-size: 3.5rem;
+  }
+
+  .header span.green {
+    font-size: 5rem;
+  }
+
+  .img-container {
+    margin-top: 1.5rem;
+    height: 60vh;
+    width: 60vw;
+  }
+
+  .countdown-container {
+    flex-direction: column;
+  }
+
+  .countdown-container h1 {
+    margin-top: 2rem;
+    font-size: 3rem;
+  }
+  .countdown {
+    width: 6rem;
+  }
+
+  .countdown h4 {
+    font-size: 3rem;
+  }
+
+  .countdown span {
+    font-size: 1.5rem;
+  }
+}
